@@ -1,0 +1,219 @@
+/* || General style rules */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* This as the class implies hide the lement visually */
+.hide-visually {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+/* || Typography */
+
+body {
+    font-size: 10px;
+    line-height: 1.5;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+    text-align: center;
+}
+
+.question {
+    color: hsl(237, 12%, 33%);
+}
+
+.question span:first-child {
+    font-size: 0.875rem;
+}
+
+.answer div {
+    font-size: 0.75rem;
+    color: hsl(240, 6%, 50%);
+}
+
+footer > div {
+    color: hsl(238, 29%, 16%);
+}
+
+/* || Layout */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: fixed linear-gradient(to bottom, 
+    hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    flex: 0;
+}
+
+/* || Section faq */
+
+.faq-accordion {
+    background-color: white;
+    width: 33em;
+    border-radius: 20px;
+    box-shadow: 0px 10px 24px rgb(0 0 0 / 20%);
+    padding: 2.5em;
+}
+
+.faq-accordion .section-img {
+    position: relative;
+    height: 9em;
+}
+
+.faq-accordion .section-img .shadow, 
+.faq-accordion .section-img .woman {
+    position: absolute;
+    width: 85%;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.faq-accordion .section-img .shadow {
+    bottom: 14%;
+}
+
+.faq-accordion .section-img .woman {
+    bottom: 47%;
+}
+
+.faq-accordion .section-img .box {
+    display: none;
+}
+
+.faq-accordion .faq-list dd {
+    margin: 0;
+}
+
+.faq-accordion .faq-list .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-accordion .faq-list .question:hover {
+    color: hsl(14, 88%, 65%);
+    transition: color 0.2s;
+}
+
+.faq-accordion .faq-list .question.active {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.faq-accordion .faq-list .question.active span:last-child{
+    transform: rotateX(180deg);
+    transition: transform 0.2s;
+}
+
+.faq-accordion .faq-list .question.active + .answer > div {
+    visibility: visible;
+    margin-top: 1.5em;
+    transition: all 0.2s;
+}
+
+.faq-accordion .faq-list .question span:last-child {
+    background: url(../images/icon-arrow-down.svg) center / auto no-repeat;
+    width: 17px;
+    height: 7px;
+    transition: transform 0.2s;
+}
+
+.faq-accordion .faq-list .answer > div {
+    max-height: 0;
+    overflow: hidden;
+    margin-right: 1.5em;
+    /* transition: all 0.2s; */
+    visibility: hidden;
+}
+
+.faq-accordion .faq-list hr {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid hsl(240, 5%, 91%);
+    margin: 1.8em 0 2em;
+}
+
+/* || Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* || Media query for Desktops/large screens breakpoint */
+
+@media screen and (min-width: 64.0625em) {
+
+    /* || Section faq */
+
+    .faq-accordion {
+        display: flex;
+        width: 92.2em;
+        min-height: 51em;
+        padding: 0;
+    }
+
+    .faq-accordion .section-accord {
+        padding: 2.5em 9.5em 0 1em;
+    }
+
+    .faq-accordion .section-img {
+        flex: 1 0 50%;
+        height: auto;
+        background: url(../images/illustration-woman-online-desktop.svg) left -8em top 6em no-repeat, 
+        url(../images/bg-pattern-desktop.svg) left -57em top -29em no-repeat;
+    }
+
+    .faq-accordion .section-img .shadow, 
+    .faq-accordion .section-img .woman {
+        display: none;
+    }
+
+    .faq-accordion .section-img .box {
+        display: block;
+        position: absolute;
+        left: -9.5em;
+        top: 20em;
+        width: 19em;
+        transition: left 0.2s;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ accordion card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <main>
+    <h1 class="hide-visually">FAQ accordion card solution</h1>
+
+    <div class="faq-accordion">
+      <div class="section-img">
+        <picture>
+          <source media="(max-width: 64em)" srcset="images/bg-pattern-mobile.svg">
+          <source media="(min-width: 64.0625em)" srcset="images/bg-pattern-desktop.svg">
+          <img class="shadow" src="images/bg-pattern-mobile.svg" alt="A shadow for the image above">
+        </picture>
+
+        <picture>
+          <source media="(max-width: 64em)" srcset="images/illustration-woman-online-mobile.svg">
+          <source media="(min-width: 64.0625em)" srcset="images/illustration-woman-online-desktop.svg">
+          <img class="woman" src="images/illustration-woman-online-mobile.svg"
+            alt="An illustration of a woman pointing to a big screen that displays faq">
+        </picture>
+
+        <img class="box" src="images/illustration-box-desktop.svg" alt="A box illustration to desing the above image">
+      </div>
+
+      <div class="section-accord">
+        <h2>FAQ</h2>
+
+        <dl class="faq-list">
+          <dt class="question" title="Click for the answer"><span>How many team members can I
+              invite?</span><span></span></dt>
+          <dd class="answer">
+            <div>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the
+              Premium plan.</div>
+            <hr>
+          </dd>
+
+          <dt class="question" title="Click for the answer"><span>What is the maximum file upload
+              size?</span><span></span></dt>
+          <dd class="answer">
+            <div>No more than 2GB. All files in your account must fit your allotted storage space.</div>
+            <hr>
+          </dd>
+
+          <dt class="question" title="Click for the answer"><span>How do I reset my password?</span><span></span></dt>
+          <dd class="answer">
+            <div>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link
+              will be emailed to you.</div>
+            <hr>
+          </dd>
+
+          <dt class="question" title="Click for the answer"><span>Can I cancel my subscription?</span><span></span></dt>
+          <dd class="answer">
+            <div>Yes! Send us a message and we’ll process your request no questions asked.</div>
+            <hr>
+          </dd>
+
+          <dt class="question" title="Click for the answer"><span>Do you provide additional support?</span><span></span>
+          </dt>
+          <dd class="answer">
+            <div>Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
+            <hr>
+          </dd>
+        </dl>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://twitter.com/ShameerKamalud1">Shameer Kamaludeen</a>.
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
