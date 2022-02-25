@@ -192,6 +192,10 @@ footer {
         padding: 0;
     }
 
+    .faq-accordion h2 {
+        text-align: left;
+    }
+
     .faq-accordion .section-accord {
         padding: 2.5em 9.5em 0 1em;
     }
